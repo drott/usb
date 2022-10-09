@@ -481,7 +481,7 @@ func (c *Context) me() *C.struct_libusb_context {
 }
 
 func (c *Context) SetDebug(level int) {
-	C.libusb_set_option(c.me(), C.LIBUSB_OPTION_LOG_LEVEL, C.int(level))
+	C.libusb_set_option(c.me(), 0, C.int(level))
 }
 
 func (c *Context) Exit() {
